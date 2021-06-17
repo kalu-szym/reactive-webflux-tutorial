@@ -1,17 +1,35 @@
 package com.ourcastle.reactivewebfluxtutorial;
 
+import com.ourcastle.reactivewebfluxtutorial.controller.ProductController;
+import com.ourcastle.reactivewebfluxtutorial.dao.ProductDaoImp;
 import com.ourcastle.reactivewebfluxtutorial.model.Product;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.Mockito;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.reactive.WebFluxTest;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.context.annotation.Import;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
-@SpringBootTest
+import static org.mockito.BDDMockito.given;
+
+@ExtendWith(SpringExtension.class)
+@WebFluxTest(controllers = ProductController.class)
+@Import(ProductDaoImp.class)
 public class TestProductController {
 
+    @MockBean
+    ProductDaoImp productDaoImp;
+
+    @Autowired
     private static WebClient webClient;
 
     @BeforeAll
@@ -20,22 +38,35 @@ public class TestProductController {
     }
 
     @Test
-    public void TestGetAllEndpoint() {
-        Flux<Product> allProducts = webClient.get()
-                .uri("/products")
-                .retrieve()
-                .bodyToFlux(Product.class);
-        allProducts.subscribe(System.out::println);
+    public void TestGetAllProducts() {
+        Product product1 = new Product("product1", 1);
+        Product product2 = new Product("product2", 2);
+        Product product3 = new Product("product3", 3);
+
+        Mockito.when(productDaoImp.getAllProducts()).thenReturn(Flux.just(product1, product2, product3));
+
+       Flux<Product> allProducts = webClient.get()
+               .uri("/products")
+               .retrieve()
+               .onStatus(HttpStatus::isError, response -> Mono.error(new Exception("Exception")))
+               .bodyToFlux(Product.class);
+
+       assertEquals()
+
     }
 
     @Test
-    public void TestGetProductByName() {
-        Mono<Product> productMono = webClient.get()
-                .uri("/products/{name}", "product1")
-                .retrieve()
-                .bodyToMono(Product.class);
 
-        productMono.subscribe(System.out::println);
+    public void TestGetProductByName() {
+        Product product1 = new Product("product1", 1);
+
+        Mockito.when(productDaoImp.getProductByName("product1")).thenReturn(Mono.just(product1));
+
+        webClient.get()
+                .uri("/products/product1")
+            .retrieve()
+                .onStatus(HttpStatus::is2xxSuccessful, clientResponse -> )
+
     }
 
     @Test

@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf0841af-89e0-499e-9e10-0386ac603558" name="Default Changelist" comment="" />
+    <list default="true" id="cf0841af-89e0-499e-9e10-0386ac603558" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/reactive-webflux-tutorial/src/main/java/com/ourcastle/reactivewebfluxtutorial/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactive-webflux-tutorial/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/reactive-webflux-tutorial/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactive-webflux-tutorial/src/main/java/com/ourcastle/reactivewebfluxtutorial/ReactiveWebfluxTutorialApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/reactive-webflux-tutorial/src/main/java/com/ourcastle/reactivewebfluxtutorial/ReactiveWebfluxTutorialApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactive-webflux-tutorial/src/main/java/com/ourcastle/reactivewebfluxtutorial/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/reactive-webflux-tutorial/src/main/java/com/ourcastle/reactivewebfluxtutorial/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactive-webflux-tutorial/src/test/java/com/ourcastle/reactivewebfluxtutorial/TestProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/reactive-webflux-tutorial/src/test/java/com/ourcastle/reactivewebfluxtutorial/TestProductController.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,7 +24,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1tunzX7gVfnmxChrpdNIY2ziYgG" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -29,12 +40,17 @@
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\albuq\kalu-workspace\reactive-webflux-tutorial\reactive-webflux-tutorial\src\main\java\com\ourcastle\reactivewebfluxtutorial" />
     </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean install" />
+    </option>
   </component>
   <component name="RunManager" selected="JUnit.TestProductController">
     <configuration name="ReactiveWebfluxTutorialApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">

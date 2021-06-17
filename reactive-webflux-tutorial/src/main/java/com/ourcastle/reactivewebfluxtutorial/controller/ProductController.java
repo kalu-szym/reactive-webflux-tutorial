@@ -3,6 +3,7 @@ package com.ourcastle.reactivewebfluxtutorial.controller;
 import com.ourcastle.reactivewebfluxtutorial.dao.ProductDaoImp;
 import com.ourcastle.reactivewebfluxtutorial.model.Product;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
@@ -31,11 +32,13 @@ public class ProductController {
     }
 
     @PostMapping(path = "/save", consumes = "application/json")
+    @ResponseStatus(HttpStatus.CREATED)
     public void saveProduct(@RequestBody Product product){
         productDaoImp.saveProduct(product);
     }
 
     @DeleteMapping("/{name}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
         public void deleteProduct (@RequestBody String name){
             productDaoImp.deleteProduct(name);
         }
