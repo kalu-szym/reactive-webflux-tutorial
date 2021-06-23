@@ -51,8 +51,6 @@ public class TestProductController {
                .onStatus(HttpStatus::isError, response -> Mono.error(new Exception("Exception")))
                .bodyToFlux(Product.class);
 
-       assertEquals()
-
     }
 
     @Test
@@ -65,7 +63,8 @@ public class TestProductController {
         webClient.get()
                 .uri("/products/product1")
             .retrieve()
-                .onStatus(HttpStatus::is2xxSuccessful, clientResponse -> )
+                .onStatus(HttpStatus::isError, response -> Mono.error(new Exception("Exception")))
+                .bodyToMono(Product.class);
 
     }
 

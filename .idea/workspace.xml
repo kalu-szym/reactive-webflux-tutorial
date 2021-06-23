@@ -5,11 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cf0841af-89e0-499e-9e10-0386ac603558" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/reactive-webflux-tutorial/src/main/java/com/ourcastle/reactivewebfluxtutorial/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_2_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_5_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_5_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_crypto_5_5_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_test_5_5_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_5_5_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reactive-webflux-tutorial/src/test/java/com/ourcastle/reactivewebfluxtutorial/TestProductControllerWebTestClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactive-webflux-tutorial/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/reactive-webflux-tutorial/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reactive-webflux-tutorial/src/main/java/com/ourcastle/reactivewebfluxtutorial/ReactiveWebfluxTutorialApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/reactive-webflux-tutorial/src/main/java/com/ourcastle/reactivewebfluxtutorial/ReactiveWebfluxTutorialApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactive-webflux-tutorial/src/main/java/com/ourcastle/reactivewebfluxtutorial/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/reactive-webflux-tutorial/src/main/java/com/ourcastle/reactivewebfluxtutorial/controller/ProductController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reactive-webflux-tutorial/src/test/java/com/ourcastle/reactivewebfluxtutorial/TestProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/reactive-webflux-tutorial/src/test/java/com/ourcastle/reactivewebfluxtutorial/TestProductController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -27,6 +32,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../Software/apache-maven-3.8.1-bin/apache-maven-3.8.1" />
+        <option name="userSettingsFile" value="C:\Software\apache-maven-3.8.1-bin\apache-maven-3.8.1\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="1tunzX7gVfnmxChrpdNIY2ziYgG" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -36,11 +49,12 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/reactive-webflux-tutorial/src/main/java/com/ourcastle/reactivewebfluxtutorial" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -52,7 +66,7 @@
       <command value="mvn clean install" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TestProductController">
+  <component name="RunManager" selected="JUnit.TestProductControllerWebTestClient">
     <configuration name="ReactiveWebfluxTutorialApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.ourcastle.reactivewebfluxtutorial.ReactiveWebfluxTutorialApplication" />
       <module name="reactive-webflux-tutorial" />
@@ -81,8 +95,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestProductControllerWebTestClient" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="reactive-webflux-tutorial" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ourcastle.reactivewebfluxtutorial.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ourcastle.reactivewebfluxtutorial" />
+      <option name="MAIN_CLASS_NAME" value="com.ourcastle.reactivewebfluxtutorial.TestProductControllerWebTestClient" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestProductControllerWebTestClient" />
         <item itemvalue="JUnit.TestProductController" />
         <item itemvalue="Application.ReactiveWebfluxTutorialApplication" />
       </list>
@@ -98,5 +128,17 @@
       <updated>1623628108849</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
