@@ -17,6 +17,8 @@ import org.springframework.test.web.reactive.server.WebTestClient;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+import static org.springframework.security.test.web.reactive.server.SecurityMockServerConfigurers.csrf;
+
 @ExtendWith(SpringExtension.class)
 @WebFluxTest(controllers = ProductController.class)
 @Import(ProductDaoImp.class)
@@ -67,11 +69,13 @@ public class TestProductControllerWebTestClient {
     }
 
     @Test
+    @WithMockUser(roles = "ADMIN")
     public void TestPostProduct() {
         Product product4 = new Product("product4", 4);
 
 
-        webClient.post()
+        webClient.mutateWith(csrf())
+                .post()
                 .uri("/products/save")
                 .contentType(MediaType.APPLICATION_JSON)
                 .bodyValue(product4)
