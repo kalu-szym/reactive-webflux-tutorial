@@ -46,7 +46,7 @@ public class TestProductControllerWebTestClient {
 
         List<Product> productRepo = new ArrayList<Product>(List.of(product1, product2, product3));
 
-        Mockito.when(productDaoImp.getAllProducts()).thenReturn(Flux.just(product3, product2, product1));
+        Mockito.when(productDaoImp.getAllProducts()).thenReturn(Flux.just(product1, product2, product3));
 
         webClient.get()
                 .uri("/products")

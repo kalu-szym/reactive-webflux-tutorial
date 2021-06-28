@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+import java.util.Comparator;
 import java.util.Optional;
 
 @RestController
@@ -32,7 +33,8 @@ public class ProductController {
     //sort by name descending - modify inbetween (service layer) and test it
     @GetMapping
     private Flux<Product> getAllProducts() {
-        return productDaoImp.getAllProducts();
+        Comparator<Product> sortProductByNameDescendingOrder = Comparator.comparing(Product::getName, (p1, p2) -> {return p2.compareTo(p1);});
+        return productDaoImp.getAllProducts().sort(sortProductByNameDescendingOrder);
     }
 
     @PostMapping(path = "/save", consumes = "application/json")

@@ -2,6 +2,7 @@ package com.ourcastle.reactivewebfluxtutorial.model;
 
 import org.springframework.stereotype.Component;
 
+import java.util.Comparator;
 import java.util.Objects;
 
 @Component
@@ -49,4 +50,6 @@ public class Product {
     public int hashCode() {
         return Objects.hash(name, numberOfProducts);
     }
+
+    Comparator<Product> sortProductByNameDescendingOrder = Comparator.comparing(Product::getName, (p1, p2) -> {return p2.compareTo(p1);});
 }
