@@ -17,7 +17,7 @@ public class ProductDaoImp implements ProductDao {
     Product product2 = new Product("product2", 2);
     Product product3 = new Product("product3", 3);
 
-    List<Product> productRepo = new ArrayList<Product>(List.of(product1, product2, product3));
+    List<Product> productRepo = new ArrayList<Product>(List.of(product2, product1, product3));
 
     @Override
     public Flux<Product> getAllProducts() {

@@ -4,18 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf0841af-89e0-499e-9e10-0386ac603558" name="Default Changelist" comment="testing controllers">
-      <change afterPath="$PROJECT_DIR$/reactive-webflux-tutorial/src/test/java/com/ourcastle/reactivewebfluxtutorial/TestProductControllerBindToController.java" afterDir="false" />
+    <list default="true" id="cf0841af-89e0-499e-9e10-0386ac603558" name="Default Changelist" comment="Functioning API and tests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactive-webflux-tutorial/src/main/java/com/ourcastle/reactivewebfluxtutorial/ReactiveWebfluxTutorialApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/reactive-webflux-tutorial/src/main/java/com/ourcastle/reactivewebfluxtutorial/ReactiveWebfluxTutorialApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactive-webflux-tutorial/src/main/java/com/ourcastle/reactivewebfluxtutorial/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/reactive-webflux-tutorial/src/main/java/com/ourcastle/reactivewebfluxtutorial/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactive-webflux-tutorial/src/main/java/com/ourcastle/reactivewebfluxtutorial/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/reactive-webflux-tutorial/src/main/java/com/ourcastle/reactivewebfluxtutorial/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactive-webflux-tutorial/src/main/java/com/ourcastle/reactivewebfluxtutorial/dao/ProductDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/reactive-webflux-tutorial/src/main/java/com/ourcastle/reactivewebfluxtutorial/dao/ProductDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reactive-webflux-tutorial/src/main/java/com/ourcastle/reactivewebfluxtutorial/dao/ProductDaoImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/reactive-webflux-tutorial/src/main/java/com/ourcastle/reactivewebfluxtutorial/dao/ProductDaoImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactive-webflux-tutorial/src/main/java/com/ourcastle/reactivewebfluxtutorial/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/reactive-webflux-tutorial/src/main/java/com/ourcastle/reactivewebfluxtutorial/model/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactive-webflux-tutorial/src/test/java/com/ourcastle/reactivewebfluxtutorial/TestProductControllerWebTestClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/reactive-webflux-tutorial/src/test/java/com/ourcastle/reactivewebfluxtutorial/TestProductControllerWebTestClient.java" afterDir="false" />
-    </list>
-    <list id="d1fdfb3e-281f-4392-b397-80c6de926550" name="Changes by kha" comment="">
       <change beforePath="$PROJECT_DIR$/reactive-webflux-tutorial/src/test/java/com/ourcastle/reactivewebfluxtutorial/TestProductControllerWebTestClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/reactive-webflux-tutorial/src/test/java/com/ourcastle/reactivewebfluxtutorial/TestProductControllerWebTestClient.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,28 +24,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="SET_USER_NAME_GLOBALLY" value="false" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/reactive-webflux-tutorial/src/test/java/com/ourcastle/reactivewebfluxtutorial/TestProductControllerWebTestClient.java">
-      <ranges>
-        <range start1="2" end1="3" start2="2" end2="3" changelist="cf0841af-89e0-499e-9e10-0386ac603558" />
-        <range start1="5" end1="6" start2="5" end2="5" changelist="cf0841af-89e0-499e-9e10-0386ac603558" />
-        <range start1="7" end1="7" start2="6" end2="7" changelist="cf0841af-89e0-499e-9e10-0386ac603558" />
-        <range start1="9" end1="9" start2="9" end2="10" changelist="cf0841af-89e0-499e-9e10-0386ac603558" />
-        <range start1="10" end1="11" start2="11" end2="12" changelist="cf0841af-89e0-499e-9e10-0386ac603558" />
-        <range start1="12" end1="13" start2="13" end2="15" changelist="cf0841af-89e0-499e-9e10-0386ac603558" />
-        <range start1="16" end1="16" start2="18" end2="19" changelist="d1fdfb3e-281f-4392-b397-80c6de926550" />
-        <range start1="17" end1="18" start2="20" end2="23" changelist="cf0841af-89e0-499e-9e10-0386ac603558" />
-        <range start1="23" end1="23" start2="28" end2="29" changelist="cf0841af-89e0-499e-9e10-0386ac603558" />
-        <range start1="25" end1="29" start2="31" end2="31" changelist="cf0841af-89e0-499e-9e10-0386ac603558" />
-        <range start1="44" end1="44" start2="46" end2="47" changelist="cf0841af-89e0-499e-9e10-0386ac603558" />
-        <range start1="61" end1="64" start2="64" end2="66" changelist="cf0841af-89e0-499e-9e10-0386ac603558" />
-        <range start1="69" end1="69" start2="71" end2="72" changelist="d1fdfb3e-281f-4392-b397-80c6de926550" />
-        <range start1="72" end1="74" start2="75" end2="78" changelist="d1fdfb3e-281f-4392-b397-80c6de926550" />
-        <range start1="85" end1="85" start2="89" end2="90" changelist="cf0841af-89e0-499e-9e10-0386ac603558" />
-        <range start1="86" end1="87" start2="91" end2="93" changelist="cf0841af-89e0-499e-9e10-0386ac603558" />
-      </ranges>
-    </file>
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -193,7 +162,21 @@
       <option name="project" value="LOCAL" />
       <updated>1624453921491</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Functioning API and tests">
+      <created>1624888564441</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1624888564441</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Functioning API and tests">
+      <created>1624888706508</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1624888706508</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -210,7 +193,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="testing controllers" />
-    <option name="LAST_COMMIT_MESSAGE" value="testing controllers" />
+    <MESSAGE value="Functioning API and tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Functioning API and tests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

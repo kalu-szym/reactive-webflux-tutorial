@@ -17,6 +17,11 @@ import org.springframework.test.web.reactive.server.WebTestClient;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+import java.util.stream.Collectors;
+
 import static org.springframework.security.test.web.reactive.server.SecurityMockServerConfigurers.csrf;
 
 @ExtendWith(SpringExtension.class)
@@ -33,11 +38,15 @@ public class TestProductControllerWebTestClient {
 
     @Test
     public void TestGetAllProducts() {
+        Comparator<Product> sortProductByNameDescendingOrder = Comparator.comparing(Product::getName, (p1,p2) -> {return p2.compareTo(p1);});
+
         Product product1 = new Product("product1", 1);
         Product product2 = new Product("product2", 2);
         Product product3 = new Product("product3", 3);
 
-        Mockito.when(productDaoImp.getAllProducts()).thenReturn(Flux.just(product1, product2, product3));
+        List<Product> productRepo = new ArrayList<Product>(List.of(product1, product2, product3));
+
+        Mockito.when(productDaoImp.getAllProducts()).thenReturn(Flux.just(product3, product2, product1));
 
         webClient.get()
                 .uri("/products")
@@ -45,10 +54,7 @@ public class TestProductControllerWebTestClient {
                 .expectStatus()
                 .is2xxSuccessful()
                 .expectBodyList(Product.class)
-                .hasSize(3)
-                .contains(product1, product2, product3);
-
-        Mockito.verify(productDaoImp, Mockito.times(1)).getAllProducts();
+                .isEqualTo(productRepo.stream().sorted(sortProductByNameDescendingOrder).collect(Collectors.toList()));
     }
 
     @Test
