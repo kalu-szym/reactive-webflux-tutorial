@@ -1,32 +1,33 @@
 package com.ourcastle.reactivewebfluxtutorial;
 
-import com.ourcastle.reactivewebfluxtutorial.config.WebConfig;
+import com.ourcastle.reactivewebfluxtutorial.controller.ProductController;
 import com.ourcastle.reactivewebfluxtutorial.dao.ProductDaoImp;
 import com.ourcastle.reactivewebfluxtutorial.model.Product;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.reactive.WebFluxTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.Import;
 import org.springframework.http.MediaType;
-import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
+import org.springframework.security.test.context.support.WithMockUser;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.reactive.server.WebTestClient;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
-@SpringJUnitConfig(WebConfig.class)
+@ExtendWith(SpringExtension.class)
+@WebFluxTest(controllers = ProductController.class)
+@Import(ProductDaoImp.class)
 public class TestProductControllerWebTestClient {
 
     @MockBean
     ProductDaoImp productDaoImp;
 
+    @Autowired
     WebTestClient webClient;
 
-    @BeforeEach
-    void setUp(ApplicationContext context) {
-        webClient = WebTestClient.bindToApplicationContext(context).build();
-    }
 
     @Test
     public void TestGetAllProducts() {
@@ -59,9 +60,8 @@ public class TestProductControllerWebTestClient {
                 .exchange()
                 .expectStatus()
                 .is2xxSuccessful()
-                .expectBodyList(Product.class)
-                .hasSize(1)
-                .contains(product1);
+                .expectBody(Product.class)
+                .isEqualTo(product1);
 
         Mockito.verify(productDaoImp, Mockito.times(1)).getProductByName("product1");
     }
@@ -83,8 +83,10 @@ public class TestProductControllerWebTestClient {
     }
 
     @Test
+    @WithMockUser(roles = "ADMIN")
     public void TestDeleteProduct() {
-        webClient.delete()
+        webClient.mutateWith(csrf())
+                .delete()
                 .uri("/products/{name}", "product1")
                 .exchange()
                 .expectStatus()

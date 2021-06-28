@@ -12,8 +12,8 @@ public interface ProductDao {
 
     Mono<Product> getProductByName(String name);
 
-    void saveProduct(Product product);
+    Mono<Void> saveProduct(Product product);
 
-    void deleteProduct(String name);
+    Mono<Void> deleteProduct(String name);
 
 }

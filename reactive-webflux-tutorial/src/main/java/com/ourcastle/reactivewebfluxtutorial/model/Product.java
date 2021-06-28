@@ -2,6 +2,8 @@ package com.ourcastle.reactivewebfluxtutorial.model;
 
 import org.springframework.stereotype.Component;
 
+import java.util.Objects;
+
 @Component
 public class Product {
     private String name;
@@ -33,5 +35,18 @@ public class Product {
 
     public void setNumberOfProducts(int numberOfProducts) {
         this.numberOfProducts = numberOfProducts;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Product product = (Product) o;
+        return numberOfProducts == product.numberOfProducts && Objects.equals(name, product.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, numberOfProducts);
     }
 }

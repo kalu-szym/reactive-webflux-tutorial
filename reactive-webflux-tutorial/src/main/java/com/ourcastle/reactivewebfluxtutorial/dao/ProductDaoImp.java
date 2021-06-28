@@ -30,12 +30,14 @@ public class ProductDaoImp implements ProductDao {
     }
 
     @Override
-    public void saveProduct(Product product) {
+    public Mono<Void> saveProduct(Product product) {
         productRepo.add(product);
+        return Mono.empty();
     }
 
     @Override
-    public void deleteProduct(String name) {
+    public Mono<Void> deleteProduct(String name) {
         productRepo.removeIf(product -> product.getName().equals("name"));
+        return Mono.empty();
     }
 }
