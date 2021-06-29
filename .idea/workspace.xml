@@ -4,14 +4,39 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf0841af-89e0-499e-9e10-0386ac603558" name="Default Changelist" comment="getAllProducts returns products in alphabetical descending order">
-      <change afterPath="$PROJECT_DIR$/reactive-webflux-tutorial/src/main/java/com/ourcastle/reactivewebfluxtutorial/service/ProductService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reactive-webflux-tutorial/src/main/java/com/ourcastle/reactivewebfluxtutorial/service/ProductServiceImp.java" afterDir="false" />
+    <list default="true" id="cf0841af-89e0-499e-9e10-0386ac603558" name="Default Changelist" comment="Added ProductService layer with getAllProducts_SortedByNameDescendingOrder()">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_ongres_scram_client_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_ongres_scram_common_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_ongres_stringprep_saslprep_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_ongres_stringprep_stringprep_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_projectreactor_addons_reactor_pool_0_2_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_projectreactor_netty_reactor_netty_1_0_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_projectreactor_netty_reactor_netty_http_brave_1_0_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_r2dbc_r2dbc_pool_0_8_7_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_r2dbc_r2dbc_postgresql_0_8_8_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_r2dbc_r2dbc_spi_0_8_5_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_brave_brave_5_13_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_brave_brave_instrumentation_http_5_13_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_reporter2_zipkin_reporter_2_16_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_reporter2_zipkin_reporter_brave_2_16_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_zipkin2_zipkin_2_23_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_checkerframework_checker_qual_3_5_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_postgresql_postgresql_42_2_20.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_r2dbc_2_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_r2dbc_1_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_relational_2_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_r2dbc_5_3_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_3_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reactive-webflux-tutorial/src/main/java/com/ourcastle/reactivewebfluxtutorial/repository/ProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reactive-webflux-tutorial/src/main/resources/schema.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactive-webflux-tutorial/src/main/java/com/ourcastle/reactivewebfluxtutorial/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/reactive-webflux-tutorial/src/main/java/com/ourcastle/reactivewebfluxtutorial/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactive-webflux-tutorial/src/test/java/com/ourcastle/reactivewebfluxtutorial/TestProductController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactive-webflux-tutorial/src/test/java/com/ourcastle/reactivewebfluxtutorial/TestProductControllerBindToController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactive-webflux-tutorial/src/test/java/com/ourcastle/reactivewebfluxtutorial/TestProductControllerWebTestClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/reactive-webflux-tutorial/src/test/java/com/ourcastle/reactivewebfluxtutorial/TestProductControllerWebTestClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactive-webflux-tutorial/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/reactive-webflux-tutorial/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactive-webflux-tutorial/src/main/java/com/ourcastle/reactivewebfluxtutorial/ReactiveWebfluxTutorialApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/reactive-webflux-tutorial/src/main/java/com/ourcastle/reactivewebfluxtutorial/ReactiveWebfluxTutorialApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactive-webflux-tutorial/src/main/java/com/ourcastle/reactivewebfluxtutorial/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/reactive-webflux-tutorial/src/main/java/com/ourcastle/reactivewebfluxtutorial/config/WebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactive-webflux-tutorial/src/main/java/com/ourcastle/reactivewebfluxtutorial/dao/ProductDaoImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/reactive-webflux-tutorial/src/main/java/com/ourcastle/reactivewebfluxtutorial/dao/ProductDaoImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactive-webflux-tutorial/src/main/java/com/ourcastle/reactivewebfluxtutorial/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/reactive-webflux-tutorial/src/main/java/com/ourcastle/reactivewebfluxtutorial/model/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactive-webflux-tutorial/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/reactive-webflux-tutorial/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,7 +220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624901219635</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added ProductService layer with getAllProducts_SortedByNameDescendingOrder()">
+      <created>1624903017847</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1624903017847</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -215,7 +247,8 @@
     <MESSAGE value="Functioning API and tests" />
     <MESSAGE value="TestGetAllProducts tests if products return in alphabetical descending order" />
     <MESSAGE value="getAllProducts returns products in alphabetical descending order" />
-    <option name="LAST_COMMIT_MESSAGE" value="getAllProducts returns products in alphabetical descending order" />
+    <MESSAGE value="Added ProductService layer with getAllProducts_SortedByNameDescendingOrder()" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added ProductService layer with getAllProducts_SortedByNameDescendingOrder()" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
