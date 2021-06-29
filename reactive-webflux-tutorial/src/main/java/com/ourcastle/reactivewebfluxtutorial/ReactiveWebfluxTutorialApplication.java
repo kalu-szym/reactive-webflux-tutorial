@@ -1,5 +1,6 @@
 package com.ourcastle.reactivewebfluxtutorial;
 
+import com.ourcastle.reactivewebfluxtutorial.model.Product;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
@@ -10,11 +11,7 @@ import org.springframework.web.reactive.config.EnableWebFlux;
 @EnableWebFlux
 public class ReactiveWebfluxTutorialApplication {
 
-	public static void main(String[] args) {
-	//	try (AnnotationConfigApplicationContext context
-	//			= new AnnotationConfigApplicationContext(ReactiveWebfluxTutorialApplication.class))
-	//	{context.getBean(NettyContext.class).onClose().block();
-
-			SpringApplication.run(ReactiveWebfluxTutorialApplication.class, args);
-		}
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(ReactiveWebfluxTutorialApplication.class, args);
+    }
+}

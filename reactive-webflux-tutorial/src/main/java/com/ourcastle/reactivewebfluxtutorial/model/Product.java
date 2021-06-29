@@ -1,5 +1,6 @@
 package com.ourcastle.reactivewebfluxtutorial.model;
 
+import org.springframework.data.annotation.Id;
 import org.springframework.stereotype.Component;
 
 import java.util.Comparator;
@@ -7,7 +8,12 @@ import java.util.Objects;
 
 @Component
 public class Product {
+
+    @Id
+    private int id;
+
     private String name;
+
     private int numberOfProducts;
 
     public Product() {
@@ -20,6 +26,21 @@ public class Product {
     public Product(String name, int numberOfProducts) {
         this.name = name;
         this.numberOfProducts = numberOfProducts;
+    }
+
+    public Product(int id, String name, int numberOfProducts, Comparator<Product> sortProductByNameDescendingOrder) {
+        this.id = id;
+        this.name = name;
+        this.numberOfProducts = numberOfProducts;
+        this.sortProductByNameDescendingOrder = sortProductByNameDescendingOrder;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -43,13 +64,15 @@ public class Product {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Product product = (Product) o;
-        return numberOfProducts == product.numberOfProducts && Objects.equals(name, product.name);
+        return id == product.id && numberOfProducts == product.numberOfProducts && name.equals(product.name);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, numberOfProducts);
+        return Objects.hash(id, name, numberOfProducts);
     }
 
-    Comparator<Product> sortProductByNameDescendingOrder = Comparator.comparing(Product::getName, (p1, p2) -> {return p2.compareTo(p1);});
+    Comparator<Product> sortProductByNameDescendingOrder = Comparator.comparing(Product::getName, (p1, p2) -> {
+        return p2.compareTo(p1);
+    });
 }
