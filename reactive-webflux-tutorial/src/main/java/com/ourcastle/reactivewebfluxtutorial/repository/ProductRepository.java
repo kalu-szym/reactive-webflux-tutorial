@@ -7,9 +7,9 @@ import reactor.core.publisher.Mono;
 
 public interface ProductRepository extends ReactiveCrudRepository<Product, Integer> {
 
-    @Query("select id, name, product_number from products p where p.name = :name")
+    @Query("select id, name, product_number from product p where p.name = :name")
     Mono<Product> findByName(String name);
 
-    @Query("delete from products p where p.name = :name")
+    @Query("delete from product p where p.name = :name")
     Mono<Void> deleteByName(String name);
 }

@@ -9,6 +9,8 @@ import java.util.Objects;
 @Component
 public class Product {
 
+    //lombok
+
     @Id
     private int id;
 
@@ -28,11 +30,10 @@ public class Product {
         this.numberOfProducts = numberOfProducts;
     }
 
-    public Product(int id, String name, int numberOfProducts, Comparator<Product> sortProductByNameDescendingOrder) {
+    public Product(int id, String name, int numberOfProducts) {
         this.id = id;
         this.name = name;
         this.numberOfProducts = numberOfProducts;
-        this.sortProductByNameDescendingOrder = sortProductByNameDescendingOrder;
     }
 
     public int getId() {
@@ -72,7 +73,7 @@ public class Product {
         return Objects.hash(id, name, numberOfProducts);
     }
 
-    Comparator<Product> sortProductByNameDescendingOrder = Comparator.comparing(Product::getName, (p1, p2) -> {
-        return p2.compareTo(p1);
-    });
+    //key extractor
+    private static final Comparator<Product> sortProductByNameDescendingOrder = Comparator.comparing(Product::getName).reversed();
+
 }

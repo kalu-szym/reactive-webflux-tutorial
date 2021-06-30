@@ -4,9 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf0841af-89e0-499e-9e10-0386ac603558" name="Default Changelist" comment="Functioning API and tests">
-      <change beforePath="$PROJECT_DIR$/reactive-webflux-tutorial/src/main/java/com/ourcastle/reactivewebfluxtutorial/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/reactive-webflux-tutorial/src/main/java/com/ourcastle/reactivewebfluxtutorial/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactive-webflux-tutorial/src/main/java/com/ourcastle/reactivewebfluxtutorial/service/ProductServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/reactive-webflux-tutorial/src/main/java/com/ourcastle/reactivewebfluxtutorial/service/ProductServiceImp.java" afterDir="false" />
+    <list default="true" id="cf0841af-89e0-499e-9e10-0386ac603558" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_20.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactive-webflux-tutorial/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/reactive-webflux-tutorial/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactive-webflux-tutorial/src/main/java/com/ourcastle/reactivewebfluxtutorial/ReactiveWebfluxTutorialApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/reactive-webflux-tutorial/src/main/java/com/ourcastle/reactivewebfluxtutorial/ReactiveWebfluxTutorialApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactive-webflux-tutorial/src/main/java/com/ourcastle/reactivewebfluxtutorial/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/reactive-webflux-tutorial/src/main/java/com/ourcastle/reactivewebfluxtutorial/model/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactive-webflux-tutorial/src/main/java/com/ourcastle/reactivewebfluxtutorial/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/reactive-webflux-tutorial/src/main/java/com/ourcastle/reactivewebfluxtutorial/repository/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactive-webflux-tutorial/src/main/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/reactive-webflux-tutorial/src/main/resources/schema.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
