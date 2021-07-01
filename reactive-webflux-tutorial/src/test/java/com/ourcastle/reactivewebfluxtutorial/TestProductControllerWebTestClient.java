@@ -3,6 +3,7 @@ package com.ourcastle.reactivewebfluxtutorial;
 import com.ourcastle.reactivewebfluxtutorial.controller.ProductController;
 import com.ourcastle.reactivewebfluxtutorial.dao.ProductDaoImp;
 import com.ourcastle.reactivewebfluxtutorial.model.Product;
+import com.ourcastle.reactivewebfluxtutorial.service.ProductServiceImp;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mockito;
@@ -26,8 +27,11 @@ import static org.springframework.security.test.web.reactive.server.SecurityMock
 
 @ExtendWith(SpringExtension.class)
 @WebFluxTest(controllers = ProductController.class)
-@Import(ProductDaoImp.class)
+@Import({ProductDaoImp.class, ProductServiceImp.class})
 public class TestProductControllerWebTestClient {
+
+    @MockBean
+    ProductServiceImp productServiceImp;
 
     @MockBean
     ProductDaoImp productDaoImp;
@@ -38,7 +42,7 @@ public class TestProductControllerWebTestClient {
 
     @Test
     public void TestGetAllProducts() {
-        Comparator<Product> sortProductByNameDescendingOrder = Comparator.comparing(Product::getName, (p1,p2) -> {return p2.compareTo(p1);});
+        Comparator<Product> sortProductByNameDescendingOrder = Comparator.comparing(Product::getName).reversed();
 
         Product product1 = new Product("product1", 1);
         Product product2 = new Product("product2", 2);
@@ -46,9 +50,9 @@ public class TestProductControllerWebTestClient {
 
         List<Product> productRepo = new ArrayList<Product>(List.of(product1, product3, product2));
 
-        Mockito.when(productDaoImp.getAllProducts()).thenReturn(Flux.just(product2, product1, product3));
+        Mockito.when(productServiceImp.getAllProducts_SortedByNameDescendingOrder()).thenReturn(Flux.just(product2, product1, product3));
 
-        webClient.get()
+        Flux<Product> allProducts_sortedByNameDescendingOrder = webClient.get()
                 .uri("/products")
                 .exchange()
                 .expectStatus()
@@ -78,7 +82,6 @@ public class TestProductControllerWebTestClient {
     @WithMockUser(roles = "ADMIN")
     public void TestPostProduct() {
         Product product4 = new Product("product4", 4);
-
 
         webClient.mutateWith(csrf())
                 .post()

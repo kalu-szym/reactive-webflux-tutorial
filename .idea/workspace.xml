@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf0841af-89e0-499e-9e10-0386ac603558" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_20.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="cf0841af-89e0-499e-9e10-0386ac603558" name="Default Changelist" comment="Refactoring - added lombok to Product.class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactive-webflux-tutorial/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/reactive-webflux-tutorial/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactive-webflux-tutorial/src/main/java/com/ourcastle/reactivewebfluxtutorial/ReactiveWebfluxTutorialApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/reactive-webflux-tutorial/src/main/java/com/ourcastle/reactivewebfluxtutorial/ReactiveWebfluxTutorialApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactive-webflux-tutorial/src/main/java/com/ourcastle/reactivewebfluxtutorial/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/reactive-webflux-tutorial/src/main/java/com/ourcastle/reactivewebfluxtutorial/model/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactive-webflux-tutorial/src/main/java/com/ourcastle/reactivewebfluxtutorial/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/reactive-webflux-tutorial/src/main/java/com/ourcastle/reactivewebfluxtutorial/repository/ProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactive-webflux-tutorial/src/main/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/reactive-webflux-tutorial/src/main/resources/schema.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactive-webflux-tutorial/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/reactive-webflux-tutorial/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactive-webflux-tutorial/src/test/java/com/ourcastle/reactivewebfluxtutorial/TestProductControllerWebTestClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/reactive-webflux-tutorial/src/test/java/com/ourcastle/reactivewebfluxtutorial/TestProductControllerWebTestClient.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +26,14 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
     <option name="SET_USER_NAME_GLOBALLY" value="false" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -147,8 +150,8 @@
       <list>
         <item itemvalue="JUnit.TestProductControllerWebTestClient" />
         <item itemvalue="Application.ReactiveWebfluxTutorialApplication" />
-        <item itemvalue="JUnit.TestProductControllerWebTestClient.TestPostProduct" />
         <item itemvalue="JUnit.TestProductControllerWebTestClient.TestGetAllProducts" />
+        <item itemvalue="JUnit.TestProductControllerWebTestClient.TestPostProduct" />
         <item itemvalue="JUnit.TestProductController" />
       </list>
     </recent_temporary>
@@ -197,7 +200,21 @@
       <option name="project" value="LOCAL" />
       <updated>1624901219635</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Refactoring and connection to postgre DB">
+      <created>1625041087190</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1625041087190</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Refactoring - added lombok to Product.class">
+      <created>1625062025071</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1625062025071</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -217,7 +234,9 @@
     <MESSAGE value="Functioning API and tests" />
     <MESSAGE value="TestGetAllProducts tests if products return in alphabetical descending order" />
     <MESSAGE value="getAllProducts returns products in alphabetical descending order" />
-    <option name="LAST_COMMIT_MESSAGE" value="getAllProducts returns products in alphabetical descending order" />
+    <MESSAGE value="Refactoring and connection to postgre DB" />
+    <MESSAGE value="Refactoring - added lombok to Product.class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactoring - added lombok to Product.class" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
